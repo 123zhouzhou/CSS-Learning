@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第五天</title>
+		
+		<!-- 权重: <内嵌=外链> < 行内 -->
+		
+		<!-- 外链式 避免同一代码文件内代码量过大 -->
+		<link rel="stylesheet" type="text/css" href="./外链CSS.css"/>
+		
+		<!-- 内嵌式应用场景:网站首页,如淘宝首页 | 需保证网页响应速度 -->
+		<style type="text/css">
+		    div span{color: springgreen;}
+			div strong{color: #CD5C5C;}
+		</style> 
+	</head>
+	<body>
+		First Image:&nbsp;<img src="./img/003.webp.jpg" width="200" title="图片大小: 321K" /><br />
+		Second Image:<img src="./img/004.webp.jpg" width="200" title="图片大小: 321K" alt="是个好看的小姐姐" />
+		<div class="ancestor" id="NO1">
+			<p>
+				<span class="offspring" id="grandson">Offspring⬅display orange</span>			
+			</p>
+			<span id="son">Markup-"div" son⬅display darkred</span>
+		</div>
+		<br />
+		<div><span><strong>Solo/Individual</strong>⬅display darkred</span></div>
+		<br />
+		
+		<!-- 行内式CSS 实际开发中不可使用! 改起来太麻烦 -->
+		<form action="" method="get">
+			<div><strong style="color: darkgoldenrod; ">Name:</strong><input type="text" style="width: 300px;" placeholder="Please Enter your username"/></div><br />
+			Gender:<input type="radio" name="sex" id="boy" /><label style="color: darkgoldenrod;" for="boy">female</label>
+			       <input type="radio" name="sex" id="girl" /><label style="color: darkgoldenrod;" for="girl">male</label>
+			<br /><br />
+			重置按钮:<input type="reset" value="重置" style="color: red;" />
+			<br /><br />
+			提交按钮:<input type="submit" value="提交" style="color: green;" />
+		</form>
+	</body>
+</html>

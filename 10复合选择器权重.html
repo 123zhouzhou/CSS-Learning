@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第五天</title>
+		<style type="text/css">
+		    /* 针对同一个标签设置CSS属性 最终计算权重最大的 */
+		    div span{color: #A52A2A;}
+			/* 后代选择器 > 简单选择器 */
+			span{color: #7FFF00;}
+			span{color: #00FFFF;}
+			/* ⬆覆盖性 */			
+			#NO1 #grandson{color: #FF8C00;}			
+			#NO1 .offspring{color:#FFD700 ;}
+			/* id > class */
+		</style>
+	</head>
+	<body>
+		<div class="ancestor" id="NO1">
+			<p>
+				<span class="offspring" id="grandson">Offspring⬅display orange</span>			
+			</p>
+			<span id="son">Markup-"div" son⬅display darkred</span>
+		</div>
+		<br />
+		<div><span><strong>Solo/Individual</strong>⬅display darkred</span></div>
+	</body>
+</html>
