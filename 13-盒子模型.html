@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第六天</title>
+		<style type="text/css">
+			div/* ,img并列并集选择器 */{
+				
+				/* 设置盒子边框 */
+				/* font-size: 20px;width: 512px;height: 512px; */ background-color:lightblue ;
+				/* border: #FFD700 solid 15px ; */
+				border-top: 5px dashed #00FF7F;
+				border-bottom:goldenrod dashed 5px ;
+				border-left: greenyellow dashed 5px;
+				border-right: #8B0000 solid 5px;
+				
+				/* 设置内边距/内填充 */
+				/* padding: 50px; */
+				/* 内边距：第一个值--上下    第二个值--左右 */
+				padding: 36px 65px;
+				/* 内边距：每个方向的值 */
+				/* padding-top:20px ;
+				padding-bottom: 10px;
+				padding-left: 40px;
+				padding-right: 30px; */
+				
+				/* 设置外边距/外填充 */
+				margin: 40px;
+				/* 外边距：第一个值--上下    第二个值--左右 */
+				margin: 36px 65px;
+				/* 外边距：上 左右 下 */
+				margin：36px 65px 39px;
+				/* 外边距：每个方向的值 */
+				margin-top: 34px;
+				margin-bottom: 53px;
+				margin-left: 37px;
+				margin-right: 45px;
+				}
+			.o_list{font-size: 32px;color: yellow}
+			#no1{font-size: 32px;color: darkorange;}
+			/* input{width: 256px;} */
+			div #after{
+				width: 30px;height: 30px; color: #006400; background-color: aliceblue;
+				border: 3px solid #7FFF00;
+				padding: 5px 7px;
+				}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span id="after">DIV BOX</span><br /><br />
+			<img src="img/003.webp.jpg" width="200" >
+			
+			<!-- 列表 -->
+			<ol>
+				<li class="o_list" id="no1">wucidici</li>
+				<li class="o_list" id="no2">makabaka</li>
+			</ol>
+			
+			<!-- 表单 -->
+			<form action="" method="get">
+				User:&nbsp;<input type="text" placeholder="Please input your account name" style="width: 256px;" /><br>
+				Pssd:&nbsp;<input type="password" style="width: 256px;" />
+				<input type="submit" value="LOGIN IN" /><br />				
+				Gender:
+				<input type="radio" name="sex" id="boy" value="" checked="checked" /><label for="boy">男</label>
+				<input type="radio" name="sex" id="girl" value=""/><label for="girl">女</label><br />
+				Status:
+				<select name="">
+					<option value="">awful</option>
+					<option value="" selected="selected">excellent</option>
+				</select><br /><br />
+				<input type="reset" name="" id="" value="RESET" />
+				
+				
+			</form>
+		</div>
+		
+	</body>
+</html>
