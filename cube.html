@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CUBE</title>
+		<style type="text/css">
+			.cube {
+					position: relative;
+					width: 300px;
+					height: 300px;
+					margin: 180px auto 0;
+					perspective: 10000px;
+					/*视距:设置的就是观察点（类似于眼睛）距离我们的3D元素的距离。
+					  一般设置1000px大概就是我们眼睛到屏幕的距离*/
+					transform-style: preserve-3d;
+					animation: roll 4s linear infinite;
+			}
+			@keyframes roll {
+						0% {
+							transform: rotateX(0deg) rotateY(0deg);
+						}
+						100% {
+							transform: rotateX(360deg) rotateY(360deg);
+						}
+					}
+			.cube .small {
+						position: absolute;
+						/*把六个相同的盒子叠在一起*/
+						width: 300px;
+						height: 300px;
+						/*设置六个盒子的宽高*/
+						box-shadow: 0 0 10px #ccc;
+						/*盒子模糊半径10px,颜色#ccc;*/
+						font-size: 50px;
+						text-align: center;
+						line-height: 300px;
+						/*设置文字样式更有利于观察*/
+						perspective: 20000px;
+						/*给子元素添加视距*/
+			}
+			.cube .small:nth-child(1) {
+				transform: rotateX(90deg) translateZ(150px);
+				}
+				/*上面:X轴旋转90deg,此时Z轴朝上,Z轴再平移150px即可*/
+			.cube .small:nth-child(2) {
+				transform: rotateX(-90deg) translateZ(150px);
+				}
+				/*下面:X轴旋转-90deg,此时Z轴朝下,Z轴再平移150px即可*/
+			.cube .small:nth-child(3) {
+				transform: rotateY(-90deg) translateZ(150px);
+				}
+				/*左面:Y轴旋转-90deg,此时Z轴朝左,Z轴再平移150px即可*/
+			.cube .small:nth-child(4) {
+				transform: rotateY(90deg) translateZ(150px);
+				}
+				/*右面:Y轴旋转90deg,此时Z轴朝右,Z轴再平移150px即可*/
+			.cube .small:nth-child(5) {
+				transform: translateZ(150px);
+				}
+				/*前面:直接朝着Z轴我们眼睛这条轴向前平移150px即可*/	
+			.cube .small:nth-child(6) {
+				transform:rotateY(180deg) translateZ(150px);
+				}
+				/*后面:Y轴旋转180deg,此时Z轴朝后,Z轴再平移150px即可*/		
+		</style>
+	</head>
+	<body>
+		<div class="cube">
+				<div class="small">上</div>
+				<div class="small">下</div>
+				<div class="small">左</div>
+				<div class="small">右</div>
+				<div class="small">前</div>
+				<div class="small">后</div>
+		</div>
+		<!-- /!--一个大盒子里面有六个小盒子分别代表正方体的六个面--/ -->
+
+	</body>
+</html>
